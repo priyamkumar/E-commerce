@@ -1,0 +1,2943 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  cursor: url("../images/cursor1.png"), auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.greenColor {
+  color: #72ff72 !important;
+}
+.redColor {
+  color: red !important;
+}
+
+#root > header > nav > div > a {
+  color: #0dcaf0;
+}
+
+#root > header > nav {
+  z-index: 2;
+}
+
+#basic-navbar-nav > div > a:hover {
+  color: #0dcaf0;
+}
+
+#basic-nav-dropdown:hover {
+  color: #0dcaf0;
+}
+
+#basic-navbar-nav > div > div.nav-item.show.dropdown > div > a:hover {
+  color: #0dcaf0;
+}
+
+.hero {
+  background: url("../images/ecommerce.png");
+  min-height: calc(100vh - 55px);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+.mask {
+  margin-top: 10vmax;
+}
+
+.text-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+}
+
+.hero-heading,
+.hero-subheading {
+  margin-bottom: 3vmax;
+}
+
+.footer {
+  padding: 2vmax;
+  background-color: #2b3035;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.leftFooter {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftFooter > h4 {
+  font-family: "Roboto";
+  font-size: 1vmax;
+}
+
+.leftFooter > p {
+  text-align: center;
+  font-size: 1.2vmax;
+}
+
+.leftFooter > img {
+  width: 10vmax;
+  margin: 1vmax;
+  cursor: pointer;
+}
+
+.midFooter {
+  width: 60%;
+  text-align: center;
+}
+
+.midFooter > h1 {
+  font-size: 4vmax;
+  font-family: "Roboto";
+  color: #0dcaf0;
+}
+
+.midFooter > p {
+  max-width: 60%;
+  margin: 1vmax auto;
+}
+
+.rightFooter {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightFooter > h4 {
+  font-family: "Roboto";
+  font-size: 1.4vmax;
+  text-decoration: underline;
+}
+
+.rightFooter > a {
+  text-decoration: none;
+  font-size: 1.3vmax;
+  color: #ffffff;
+  transition: all 0.5s;
+  margin: 0.5vmax;
+}
+
+.rightFooter > a:hover {
+  color: #0dcaf0;
+}
+
+.featured-products {
+  text-align: center;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.featured-products-container {
+  margin: 0 auto;
+  padding: 5vmax 0;
+  display: flex;
+  width: 80vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.featured-products-heading {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 1.4vmax;
+  border-bottom: 2px solid #ffffff;
+  width: 20vmax;
+  padding: 5vmax 0 1vmax 0;
+  margin: 0 auto;
+}
+
+.productCard {
+  width: 14vmax;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+}
+
+.productCard > img {
+  width: 14vmax;
+  height: 15vmax;
+  object-fit: cover;
+}
+
+.productCard > div {
+  margin: 0.5vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productCardSpan {
+  margin: 0.5vmax;
+  font-size: 0.7vmax;
+}
+
+.productCard > p {
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+}
+
+.productCard > span {
+  margin: 0.5vmax;
+  color: #0dcaf0;
+  font-size: 1vmax;
+}
+
+.productCard:hover {
+  box-shadow: 0 0 5px #ffffff;
+  transform: translateY(-1vmax);
+}
+
+.loader-container {
+  min-height: calc(100vh - 77px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.productDetails {
+  width: 100vw;
+  max-width: 100%;
+  padding: 6vmax;
+  display: flex;
+  background-color: #222121;
+  color: #ffffff;
+  flex-shrink: 1;
+}
+
+.productDetails > div {
+  width: 100%;
+  padding: 2vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#root > div > div:nth-child(1) > div {
+  width: 100%;
+}
+
+.productDetails > div:last-child {
+  align-items: flex-start;
+}
+
+#root > div > div:nth-child(1) > div > div.css-1f8sh1y > * {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.carouselImage {
+  width: 20vmax;
+}
+
+.detailsBlock-1 > h2 {
+  font: 600 1.6vmax "Roboto";
+}
+
+.detailsBlock-1 > p {
+  font: 200 0.6vmax "Roboto";
+}
+
+.detailsBlock-2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  width: 70%;
+  padding: 1vmax 0;
+}
+
+.detailsBlock-2-span {
+  font: 200 0.8vmax "Roboto";
+}
+
+.detailsBlock-3 {
+  width: 70%;
+}
+
+.detailsBlock-3 > h1 {
+  font: 400 1.8vmax "Franklin Gothic Medium";
+  margin: 1vmax 0;
+}
+
+.detailsBlock-3-1 {
+  display: flex;
+  align-items: center;
+}
+
+.detailsBlock-3-1-1 > button {
+  border: none;
+  background-color: #222121;
+  padding: 0.5vmax;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.5s;
+  width: 2vmax;
+}
+
+.detailsBlock-3-1-1 > button:hover {
+  background-color: #4d4a4a;
+}
+
+.detailsBlock-3-1-1 > input {
+  border: none;
+  padding: 0.5vmax;
+  width: 2vmax;
+  text-align: center;
+  outline: none;
+  font: 400 0.8vmax "Roboto";
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.detailsBlock-3-1 > button:last-child {
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.5s;
+  background-color: #0dcaf0;
+  font: 500 0.7vmax "Roboto";
+  border-radius: 20px;
+  padding: 0.5vmax 2vmax;
+  margin: 1vmax;
+  outline: none;
+}
+
+.detailsBlock-3-1 > button:last-child:hover {
+  background-color: #0dcaf09e;
+}
+
+.detailsBlock-3 > p {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 1vmax 0;
+  font: 400 1vmax "Roboto";
+  margin: 1vmax 0;
+}
+
+.detailsBlock-4 {
+  font: 500 1.2vmax sans-serif;
+}
+
+.detailsBlock-4 > p {
+  font: 300 0.8vmax sans-serif;
+}
+
+.submitReview {
+  border: none;
+  background-color: #0dcaf0;
+  font: 500 0.7vmax "Roboto";
+  border-radius: 20px;
+  padding: 0.6vmax 2vmax;
+  margin: 1vmax 0;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.submitReview:hover {
+  background-color: #0dcaf09e;
+  transform: scale(1.1);
+}
+
+.submitDialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewsHeading {
+  background-color: #222121;
+  color: #ffffff;
+  margin: 0 auto;
+  font: 500 1.4vmax "Roboto";
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+  padding: 1vmax;
+}
+
+.reviews {
+  background-color: #222121;
+  color: #ffffff;
+  display: flex;
+  overflow: auto;
+}
+
+.reviewCard {
+  flex: none;
+  box-shadow: 0 0 5px #ffffff;
+  border: 1px solid #ffffff;
+  width: 30vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vmax;
+  padding: 3vmax;
+}
+
+.reviewCard > img {
+  width: 5vmax;
+}
+
+.reviewCard > p {
+  color: #ffffff;
+  font: 600 0.9vmax "Roboto";
+}
+
+.reviewCardComment {
+  color: #ffffff;
+  font: 300 0.8vmax cursive;
+}
+
+.noReviews {
+  font: 400 1.3vmax "Gill Sans";
+  text-align: center;
+  color: #ffffff;
+  background-color: #222121;
+  margin: 0;
+}
+
+.products {
+  background-color: #222121;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.productsHeading {
+  margin: 0 auto;
+  width: 15vw;
+  border-bottom: 1px solid #ffffff;
+  padding: 2vmax;
+  color: #ffffff;
+  font: 500 1.5vmax "Roboto";
+  text-align: center;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5vmax;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vmax;
+}
+
+.filterBox {
+  width: 10vmax;
+  position: absolute;
+  left: 4vmax;
+  top: 10vmax;
+}
+
+.categoryBox {
+  padding: 0;
+}
+
+.category-link {
+  list-style: none;
+  font: 400 1vmax "Roboto";
+  margin: 0.4vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.category-link:hover {
+  color: #0dcaf0;
+}
+
+.filterBox > fieldset {
+  border: 1px solid #ffffff;
+  padding: 1vmax;
+}
+
+.signInSignupContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.signInSignUpBox {
+  width: 25vw;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.signIn_signUp_toggle {
+  display: flex;
+  height: 3vmax;
+}
+
+.signIn_signUp_toggle > p {
+  font: 300 1vmax "Roboto";
+  transition: all 0.5s;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.signIn_signUp_toggle > p:hover {
+  color: #0dcaf0;
+}
+
+.signInSignUpBox > div > button {
+  background-color: #0dcaf0;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+  color: #ffffff;
+}
+
+.signInForm,
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.signInForm input:hover,
+.signUpForm input:hover {
+  border-color: #0dcaf0;
+}
+
+.signInForm input:focus,
+.signUpForm input:focus {
+  border-color: #0dcaf0;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #4d4a4a inset;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.signUpForm {
+  transform: translateY(-100%) translateX(-100vmax);
+}
+
+.signInForm > div,
+.signUpForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.signInForm > div > input,
+.signUpForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  font: 300 0.9vmax "Roboto";
+  outline: none;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.signInForm > div > svg,
+.signUpForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+.signInForm > a {
+  color: #ffffff;
+  text-decoration: none;
+  align-self: flex-end;
+  transition: all 0.5s;
+  font: 500 0.8vmax "Gill Sans";
+}
+
+.signInForm > a:hover {
+  color: #0dcaf0;
+}
+
+#signUpImage > img {
+  width: 3vmax;
+  border-radius: 100%;
+}
+
+#signUpImage > input {
+  display: flex;
+  padding: 0%;
+}
+
+#signUpImage > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax "Roboto";
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: #ffffff;
+  background-color: #222121;
+}
+
+#signUpImage > input::file-selector-button:hover {
+  background-color: #4d4a4a;
+}
+
+.signInButton,
+.signUpButton {
+  border: none;
+  background-color: #0dcaf0;
+  color: #ffffff;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+.signInButton:hover,
+.signUpButton:hover {
+  background-color: #0dcaf09e;
+}
+
+.shiftToLeft {
+  transform: translateX(-100%);
+}
+.shiftToNeutral {
+  transform: translateX(0%);
+}
+
+.shiftToNeutralForm {
+  transform: translateX(0%) translateY(-100%);
+}
+
+.shiftToRight {
+  transform: translateX(100%);
+}
+
+.speedDial {
+  position: fixed;
+  right: 6vmax;
+  top: 6vmax;
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+.profileContainer {
+  display: flex;
+  top: 0%;
+  left: 0%;
+  max-width: 100%;
+  height: 100vh;
+  width: 100vw;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.profileContainer > div {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileContainer > div:first-child > h1 {
+  font: 500 2.2vmax "Roboto";
+  transform: translateX(-10vmax) translateY(-2vmax);
+}
+
+.profileContainer > div:first-child > img {
+  width: 20vmax;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+
+.profileContainer > div:first-child > img:hover {
+  transform: scale(1.05);
+}
+
+.profileContainer > div:first-child > a {
+  border: none;
+  background-color: #0dcaf0;
+  font: 400 1vmax "Roboto";
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5vmax;
+  width: 30%;
+  margin: 4vmax;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.profileContainer > div:first-child > a:hover {
+  background-color: #0dcaf09e;
+}
+
+.profileContainer > div:last-child {
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 5vmax;
+}
+
+.profileContainer > div:last-child > div > h4 {
+  font: 400 1.2vmax "Roboto";
+}
+
+.profileContainer > div:last-child > div > p {
+  font: 400 1vmax cursive;
+  margin: 0.2vmax;
+}
+
+.profileContainer > div:last-child > div:last-child {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.profileContainer > div:last-child > div:last-child > a {
+  border: none;
+  background-color: #0dcaf0;
+  font: 400 1vmax "Roboto";
+  text-decoration: none;
+  padding: 0.5vmax;
+  text-align: center;
+  transition: all 0.5s;
+  margin: 1vmax 0;
+  color: #ffffff;
+}
+
+.profileContainer > div:last-child > div:last-child > a:hover {
+  background-color: #0dcaf09e;
+}
+
+.updateProfileContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.updateProfileBox {
+  width: 25vw;
+  height: 70vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.updateProfileHeading {
+  text-align: center;
+  color: #ffffff;
+  font: 400 1.3vmax "Roboto";
+  padding: 1.3vmax;
+  border-bottom: 1px solid #ffffff;
+  width: 50%;
+  margin: auto;
+}
+
+.updateProfileForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.updateProfileForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.updateProfileForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.updateProfileForm > div > input:hover {
+  border-color: #0dcaf0;
+}
+
+.updateProfileForm > div > input:focus {
+  border-color: #0dcaf0;
+}
+
+.updateProfileForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+#updateProfileImage > img {
+  width: 3vmax;
+  border-radius: 100%;
+  margin: 1vmax;
+}
+#updateProfileImage > input {
+  display: flex;
+  padding: 0%;
+}
+
+#updateProfileImage > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: #ffffff;
+  background-color: #222121;
+}
+
+#updateProfileImage > input::file-selector-button:hover {
+  background-color: #4d4a4a;
+}
+
+.updateProfileBtn {
+  border: none;
+  background-color: #0dcaf0;
+  color: #ffffff;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+}
+
+.updateProfileBtn:hover {
+  background-color: #0dcaf09e;
+}
+
+.updatePasswordContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222121;
+  color: #ffffff;
+  position: fixed;
+  top: 0%;
+  left: 0;
+}
+
+.updatePasswordBox {
+  width: 25vw;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.updatePasswordHeading {
+  text-align: center;
+  font: 400 1.3vmax "Roboto";
+  padding: 1.3vmax;
+  border-bottom: 1px solid #ffffff;
+  width: 50%;
+  margin: auto;
+}
+
+.updatePasswordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.updatePasswordForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.updatePasswordForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.updatePasswordForm > div > input:hover {
+  border-color: #0dcaf0;
+}
+
+.updatePasswordForm > div > input:focus {
+  border-color: #0dcaf0;
+}
+
+.updatePasswordForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+.updatePasswordBtn {
+  border: none;
+  background-color: #0dcaf0;
+  color: #ffffff;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+}
+
+.updatePasswordBtn:hover {
+  background-color: #0dcaf09e;
+}
+
+.forgotPasswordContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.forgotPasswordBox {
+  width: 25vw;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.forgotPasswordHeading {
+  text-align: center;
+  font: 400 1.3vmax "Roboto";
+  padding: 1.3vmax;
+  border-bottom: 1px solid #ffffff;
+  width: 50%;
+  margin: auto;
+}
+
+.forgotPasswordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.forgotPasswordForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.forgotPasswordForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.forgotPasswordForm > div > input:hover {
+  border-color: #0dcaf0;
+}
+
+.forgotPasswordForm > div > input:focus {
+  border-color: #0dcaf0;
+}
+
+.forgotPasswordForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+.forgotPasswordBtn {
+  border: none;
+  background-color: #0dcaf0;
+  color: #ffffff;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+.forgotPasswordBtn:hover {
+  background-color: #0dcaf09e;
+}
+
+.resetPasswordContainer {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222121;
+  color: #ffffff;
+  position: fixed;
+  top: 0%;
+  left: 0;
+}
+
+.resetPasswordBox {
+  width: 25vw;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.resetPasswordHeading {
+  text-align: center;
+  font: 400 1.3vmax "Roboto";
+  padding: 1.3vmax;
+  border-bottom: 1px solid #ffffff;
+  width: 50%;
+  margin: auto;
+}
+
+.resetPasswordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  transition: all 0.5s;
+}
+
+.resetPasswordForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.resetPasswordForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.resetPasswordForm > div > input:hover {
+  border-color: #0dcaf0;
+}
+
+.resetPasswordForm > div > input:focus {
+  border-color: #0dcaf0;
+}
+
+.resetPasswordForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+.resetPasswordBtn {
+  border: none;
+  background-color: #0dcaf0;
+  color: #ffffff;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+}
+
+.resetPasswordBtn:hover {
+  background-color: #0dcaf09e;
+}
+
+.cartPage {
+  padding: 5vmax;
+  background-color: #222121;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.cartHeader {
+  background-color: #0dcaf0;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  font: 300 0.7vmax "Roboto";
+}
+
+.cartHeader > p {
+  margin: 10px;
+}
+
+.cartHeader > p:last-child {
+  text-align: end;
+}
+
+.cartContainer {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+}
+
+.cartInput {
+  display: flex;
+  align-items: center;
+  height: 8vmax;
+}
+
+.cartInput > button {
+  border: none;
+  background-color: #222121;
+  padding: 0.5vmax;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.cartInput > button:hover {
+  background-color: #4d4a4a;
+}
+
+.cartInput > input {
+  border: none;
+  padding: 0.5vmax;
+  width: 2vmax;
+  text-align: center;
+  outline: none;
+  font: 400 0.8vmax "Roboto";
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.cartSubtotal {
+  display: flex;
+  padding: 0.5vmax;
+  height: 8vmax;
+  align-items: center;
+  box-sizing: border-box;
+  font: 300 1vmax cursive;
+  justify-content: flex-end;
+}
+
+.cartGrossProfit {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+}
+
+.cartGrossProfitBox {
+  border-top: 3px solid #0dcaf0;
+  margin: 1vmax 4vmax;
+  box-sizing: border-box;
+  padding: 2vmax 0;
+  font: 300 1vmax "Roboto";
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkOutBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkOutBtn > button {
+  background-color: #0dcaf0;
+  color: #ffffff;
+  border: none;
+  padding: 0.8vmax 4vmax;
+  width: 50%;
+  font: 300 0.8vmax "Roboto";
+  margin: 1vmax 4vmax;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.checkOutBtn > button:hover {
+  background-color: #0dcaf09e;
+}
+
+.cartItemCard {
+  display: flex;
+  padding: 1vmax;
+  height: 8vmax;
+  align-items: flex-start;
+}
+
+.cartItemCard > img {
+  width: 5vmax;
+}
+
+.cartItemCard > div {
+  display: flex;
+  margin: 0.3vmax 1vmax;
+  flex-direction: column;
+}
+
+.cartItemCard > div > a {
+  font: 300 0.9vmax cursive;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.cartItemCard > div > span {
+  font: 300 0.9vmax "Roboto";
+}
+
+.cartItemCard > div > p {
+  color: #0dcaf0;
+  font: 100 0.8vmax "Roboto";
+  cursor: pointer;
+}
+
+.emptyCart {
+  margin: auto;
+  text-align: center;
+  padding: 10vmax;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222121;
+  color: #ffffff;
+  min-height: 100vh;
+}
+.emptyCart > svg {
+  font-size: 5vmax;
+}
+
+#root > div.emptyCart > svg > path {
+  color: #0dcaf0;
+}
+
+.emptyCart > p {
+  font-size: 2vmax;
+}
+
+.emptyCart > a {
+  background-color: rgba(0, 0, 0, 0.623);
+  color: #ffffff;
+  border: none;
+  padding: 1vmax 3vmax;
+  cursor: pointer;
+  font: 400 1vmax "Roboto";
+  text-decoration: none;
+}
+
+.emptyCart > a:hover {
+  background-color: #2b3035;
+}
+
+.shippingContainer {
+  background-color: #222121;
+  color: #ffffff;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shippingBox {
+  width: 25vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.shippingHeading {
+  text-align: center;
+  font: 400 1.3vmax "Roboto";
+  padding: 1.3vmax;
+  border-bottom: 1px solid #ffffff;
+  width: 50%;
+  margin: auto;
+}
+
+.shippingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  height: 80%;
+  transition: all 0.5s;
+}
+
+.shippingForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.shippingForm > div > input,
+.shippingForm > div > select {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  background-color: #222121;
+  color: #ffffff;
+  outline: none;
+}
+
+.shippingForm > div > input:hover {
+  border-color: #0dcaf0;
+}
+
+.shippingForm > div > select:hover {
+  border-color: #0dcaf0;
+}
+
+.shippingForm > div > input:focus {
+  border-color: #0dcaf0;
+}
+
+.shippingForm > div > select:focus {
+  border-color: #0dcaf0;
+}
+
+.shippingForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+.shippingBtn {
+  border: none;
+  background-color: #0dcaf0;
+  color: #ffffff;
+  font: 300 1vmax "Roboto";
+  width: 100%;
+  padding: 1vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+  margin: 2vmax;
+}
+
+.shippingBtn:hover {
+  background-color: #0dcaf09e;
+}
+
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+  color: #ffffff;
+}
+
+.MuiStepConnector-line {
+  display: none !important;
+}
+
+.MuiStepConnector-root {
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.confirmOrderPage {
+  height: 100vh;
+  background-color: #222121;
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  color: #ffffff;
+}
+
+.confirmOrderPage > div:last-child {
+  border-left: 1px solid #ffffff;
+}
+
+.confirmshippingArea {
+  padding: 5vmax;
+  padding-bottom: 0%;
+}
+
+.confirmshippingArea > p {
+  font: 400 1.8vmax "Roboto";
+}
+
+.confirmshippingAreaBox,
+.confirmCartItemsContainer {
+  margin: 2vmax;
+}
+
+.confirmshippingAreaBox > div {
+  display: flex;
+  margin: 1vmax 0;
+}
+
+.confirmshippingAreaBox > div > p {
+  font: 400 1vmax "Roboto";
+}
+.confirmshippingAreaBox > div > span {
+  margin: 0 1vmax;
+  font: 100 1vmax "Roboto";
+}
+
+.confirmCartItems > p {
+  font: 400 1.8vmax "Roboto";
+}
+
+.confirmCartItems {
+  padding: 5vmax;
+  padding-top: 2vmax;
+}
+
+.confirmCartItemsContainer {
+  max-height: 20vmax;
+  overflow-y: auto;
+}
+
+.confirmCartItemsContainer > div {
+  display: flex;
+  font: 400 1vmax "Roboto";
+  align-items: center;
+  justify-content: space-between;
+  margin: 2vmax 0;
+}
+
+.confirmCartItemsContainer > div > img {
+  width: 3vmax;
+}
+
+.confirmCartItemsContainer > div > a {
+  color: #ffffff;
+  margin: 0 2vmax;
+  width: 60%;
+  text-decoration: none;
+}
+
+.confirmCartItemsContainer > div > span {
+  font: 100 1vmax "Roboto";
+}
+
+.orderSummary {
+  padding: 7vmax;
+}
+
+.orderSummary > p {
+  text-align: center;
+  font: 400 1.8vmax "Roboto";
+  border-bottom: 1px solid #ffffff;
+  padding: 1vmax;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.orderSummary > div > div {
+  display: flex;
+  font: 300 1vmax "Roboto";
+  justify-content: space-between;
+  margin: 2vmax 0;
+}
+
+.orderSummaryTotal {
+  display: flex;
+  font: 300 1vmax "Roboto";
+  justify-content: space-between;
+  border-top: 1px solid #ffffff;
+  padding: 2vmax 0;
+}
+
+.orderSummary > button {
+  background-color: #0dcaf0;
+  color: #ffffff;
+  width: 100%;
+  padding: 1vmax;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.5s;
+  font: 400 1vmax "Roboto";
+}
+
+.orderSummary > button:hover {
+  background-color: #0dcaf09e;
+}
+
+.paymentContainer {
+  display: grid;
+  place-items: center;
+  background-color: #222121;
+  height: 65vh;
+  color: #ffffff;
+}
+
+.paymentForm {
+  width: 22%;
+  height: 100%;
+}
+
+.paymentForm > p {
+  font: 400 2vmax "Roboto";
+  border-bottom: 1px solid #ffffff;
+  padding: 1vmax 0;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.paymentForm > div {
+  display: flex;
+  align-items: center;
+  margin: 2vmax 0;
+}
+
+.paymentInput {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+}
+
+.paymentForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+.paymentFormBtn {
+  border: none;
+  background-color: #0dcaf0;
+  color: #ffffff;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.paymentFormBtn:hover {
+  background-color: #0dcaf09e;
+}
+
+.orderSuccess {
+  margin: auto;
+  text-align: center;
+  padding: 10vmax;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222121;
+  min-height: 80vh;
+}
+.orderSuccess > svg {
+  font-size: 7vmax;
+  color: #0dcaf0;
+}
+.orderSuccess > p {
+  font-size: 2vmax;
+}
+.orderSuccess > a {
+  background-color: #0dcaf0;
+  color: #ffffff;
+  border: none;
+  padding: 1vmax 3vmax;
+  cursor: pointer;
+  font: 400 1vmax "Roboto";
+  text-decoration: none;
+  margin: 2vmax;
+}
+
+.orderSuccess > a:hover {
+  background-color: #0dcaf09e;
+}
+
+.myOrdersPage {
+  width: 100vw;
+  max-width: 100%;
+  padding: 0 7vmax;
+  box-sizing: border-box;
+  background-color: #222121;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#myOrdersHeading {
+  text-align: center;
+  font: 400 1.2vmax "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.myOrdersTable div {
+  font: 300 1vmax "Roboto";
+  border: none;
+}
+
+.myOrdersTable a {
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.myOrdersTable a:hover {
+  color: #0dcaf0;
+}
+
+.MuiDataGrid-columnHeader {
+  background-color: #0dcaf0;
+  padding: 1vmax !important;
+}
+
+.MuiDataGrid-columnHeader div {
+  color: #ffffff;
+  font: 500 1.1vmax "Roboto" !important;
+}
+
+.MuiDataGrid-iconSeparator {
+  display: none !important;
+}
+
+.orderDetailsPage {
+  background-color: #222121;
+  color: #ffffff;
+  min-height: 80vh;
+}
+
+.orderDetailsContainer > h1 {
+  font: 300 3vmax "Roboto";
+  margin: 4vmax 0;
+  color: #0dcaf0;
+}
+
+.orderDetailsContainer {
+  padding: 5vmax;
+  padding-bottom: 0%;
+}
+
+.orderDetailsContainer > p {
+  font: 400 1.8vmax "Roboto";
+}
+
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+  margin: 2vmax;
+}
+
+.orderDetailsContainerBox > div {
+  display: flex;
+  margin: 1vmax 0;
+}
+
+.orderDetailsContainerBox > div > p {
+  font: 400 1vmax "Roboto";
+  color: #ffffff;
+}
+.orderDetailsContainerBox > div > span {
+  margin: 0 1vmax;
+  font: 100 1vmax "Roboto";
+  color: #ffffff;
+}
+
+.orderDetailsCartItems > p {
+  font: 400 1.8vmax "Roboto";
+}
+
+.orderDetailsCartItems {
+  padding: 2vmax 5vmax;
+  border-top: 1px solid #ffffff;
+}
+
+.orderDetailsCartItemsContainer > div {
+  display: flex;
+  font: 400 1vmax "Roboto";
+  align-items: center;
+  margin: 2vmax 0;
+}
+
+.orderDetailsCartItemsContainer > div > img {
+  width: 3vmax;
+}
+
+.orderDetailsCartItemsContainer > div > a {
+  color: #ffffff;
+  margin: 0 2vmax;
+  width: 60%;
+  text-decoration: none;
+}
+
+.orderDetailsCartItemsContainer > div > span {
+  font: 100 1vmax "Roboto";
+  color: #ffffff;
+}
+
+.sidebar {
+  background-color: #222121;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.sidebar > a:first-child {
+  padding: 0;
+}
+.sidebar > a > img {
+  width: 100%;
+  transition: all 0.5s;
+  padding-inline: 3vmax;
+}
+
+.sidebar > a > img:hover {
+  filter: drop-shadow(0 0 10px #0dcaf0);
+}
+.sidebar a {
+  text-decoration: none;
+  color: #ffffff;
+  font: 200 1rem "Roboto";
+  padding: 2rem;
+  transition: all 0.5s;
+}
+.sidebar a:hover {
+  color: #0dcaf0;
+  transform: scale(1.1);
+}
+
+.sidebar a > P {
+  display: flex;
+  align-items: center;
+}
+.sidebar a > p > svg {
+  margin-right: 0.5rem;
+}
+
+.dashboard {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background-color: #222121;
+}
+
+.dashboardContainer {
+  border-left: 1px solid #ffffff;
+  padding: 3rem 0;
+}
+
+.dashboardContainer > h1 {
+  font: 300 2rem "Roboto";
+  text-align: center;
+  width: 50%;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+.dashboardSummary {
+  margin: 2rem 0;
+}
+
+.dashboardSummary > div {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboardSummary > div > p {
+  background-color: rgba(70, 117, 218, 0.932);
+  color: white;
+  font: 300 1.3rem "Roboto";
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+  margin: 0 2rem;
+}
+.dashboardSummaryBox2 > a {
+  color: rgb(0, 0, 0);
+  font: 300 2rem "Roboto";
+  text-align: center;
+  background-color: rgb(255, 233, 174);
+  text-decoration: none;
+  padding: 1.5rem;
+  width: 10vmax;
+  height: 10vmax;
+  margin: 2rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashboardSummaryBox2 > a:first-child {
+  background-color: #0dcaf0;
+  color: rgb(255, 255, 255);
+}
+
+.dashboardSummaryBox2 > a:last-child {
+  background-color: #ffffff;
+  color: #222121;
+}
+
+.lineChart {
+  width: 80%;
+  margin: auto;
+}
+
+.doughnutChart {
+  width: 30vmax;
+  margin: auto;
+}
+
+.productListContainer {
+  width: 100%;
+  max-width: 100%;
+  background-color: #222121;
+  border-left: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: auto;
+}
+
+#productListHeading {
+  font: 400 2rem "Roboto";
+  padding: 0.5vmax;
+  box-sizing: border-box;
+  color: #ffffff;
+  transition: all 0.5s;
+  margin: 2rem;
+  text-align: center;
+}
+
+.productListTable {
+  border: none !important;
+}
+
+.productListTable div {
+  font: 300 1vmax "Roboto";
+  color: #ffffff;
+  border: none !important;
+}
+
+.productListTable a,
+.productListTable button {
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.productListTable a:hover {
+  color: #0dcaf0;
+}
+
+.productListTable button:hover {
+  color: rgb(236, 30, 30);
+}
+
+.MuiDataGrid-columnHeader div {
+  color: rgb(255, 255, 255);
+}
+
+.newProductContainer {
+  width: 100%;
+  background-color: #222121;
+  border-left: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #ffffff;
+}
+.newProductContainer h1 {
+  font: 300 2rem "Roboto";
+  text-align: center;
+}
+
+.createProductForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3vmax;
+  justify-content: space-evenly;
+  height: 70%;
+  width: 40vh;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.createProductForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.createProductForm > div > input,
+.createProductForm > div > select,
+.createProductForm > div > textarea {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  color: #ffffff;
+  background-color: #222121;
+}
+
+.createProductForm > div > input:hover,
+.createProductForm > div > select:hover,
+.createProductForm > div > textarea:hover {
+  border-color: #0dcaf0;
+}
+
+.createProductForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+#createProductFormFile > input {
+  display: flex;
+  padding: 0%;
+}
+
+#createProductFormFile > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: #ffffff;
+  background-color: #222121;
+}
+
+#createProductFormFile > input::file-selector-button:hover {
+  background-color: #4d4a4a;
+}
+
+#createProductFormImage {
+  width: 100%;
+  overflow: auto;
+}
+
+#createProductFormImage > img {
+  width: 3vmax;
+  margin: 0 0.5vmax;
+}
+#createProductBtn {
+  border: none;
+  background-color: #0dcaf0;
+  color: white;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+}
+
+#createProductBtn:hover {
+  background-color: #0dcaf09e;
+}
+
+.updateOrderForm {
+  margin: 5vmax 0;
+  padding: 3vmax;
+}
+
+.updateOrderForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.updateOrderForm > div > select {
+  padding: 1vmax 4vmax;
+  margin: 2rem 0;
+  width: 100%;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.updateOrderForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+}
+
+.productReviewsContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #222121;
+  color: #ffffff;
+  border-left: 1px solid #ffffff;
+  height: 100vh;
+}
+
+.productReviewsForm {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3vmax;
+}
+
+.productReviewsFormHeading {
+  color: #ffffff;
+  font: 300 2rem "Roboto";
+  text-align: center;
+}
+
+.productReviewsForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 2rem;
+}
+.productReviewsForm > div > input {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+  background-color: #222121;
+  color: #ffffff;
+}
+
+.productReviewsForm > div > input:hover {
+  border-color: #0dcaf0;
+}
+
+.productReviewsForm > div > input:focus {
+  border-color: #0dcaf0;
+}
+
+.productReviewsForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: #ffffff;
+}
+
+.contactContainer {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #222121;
+  color: #ffffff;
+  position: fixed;
+}
+
+.mailBtn {
+  text-decoration: none;
+  transform: translateX(-100vw);
+  animation: mailBtnAnimation 2s forwards;
+}
+
+.mailBtn > button {
+  text-decoration: none;
+  font: 200 2vmax "Roboto";
+  cursor: url("https://img.icons8.com/color/48/000000/edit--v2.png"), pointer;
+  padding: 2vmax;
+  color: #0dcaf0;
+}
+
+@keyframes mailBtnAnimation {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.aboutSection {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #222121;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  position: fixed;
+}
+
+.aboutSectionGradient {
+  background-image: linear-gradient(to bottom right, #222121, #0dcaf0);
+}
+
+.aboutSectionContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80vw;
+  height: 80vh;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutSectionContainer > h1 {
+  font: 400 3vmax "Roboto";
+  margin: 2vmax;
+}
+
+.aboutSectionContainer > div {
+  display: flex;
+  width: 100%;
+}
+
+.aboutSectionContainer > div > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+}
+
+.aboutSectionContainer > div > div > p {
+  font: 100 1vmax "Roboto";
+}
+
+.aboutSectionContainer > div > div > button {
+  margin: 1vmax 0;
+}
+
+.aboutSectionContainer > div > div > span {
+  font: 100 1vmax "Roboto";
+  text-align: center;
+  width: 80%;
+}
+
+.aboutSectionContainer2 > h2 {
+  font: 100 2vmax "Roboto";
+  margin: 2vmax;
+}
+
+.aboutSectionContainer2 > a > svg {
+  font-size: 4vmax;
+}
+
+.xSvgIcon,
+.linkedinSvgIcon,
+.githubSvgIcon {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+  .productCard > p {
+    font-size: 1.7vmax;
+  }
+
+  .productCard > div {
+    margin: 0vmax;
+    display: block;
+  }
+
+  .productCard > span {
+    font-size: 1.5vmax;
+  }
+
+  .productCard > div > span {
+    margin: 0 0.5vmax;
+    font-size: 1vmax;
+  }
+
+  .productDetails {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .productDetails > div:last-child {
+    align-items: center;
+  }
+
+  .detailsBlock-1 > h2 {
+    font-size: 2.8vmax;
+    text-align: center;
+  }
+
+  .detailsBlock-1 > p {
+    text-align: center;
+    font-size: 1vmax;
+  }
+
+  .detailsBlock-2 {
+    justify-content: center;
+  }
+
+  .detailsBlock-2 > span {
+    font-size: 1.5vmax;
+  }
+
+  .detailsBlock-3 > h1 {
+    font: 700 3vmax "Franklin Gothic Medium";
+    text-align: center;
+  }
+
+  .detailsBlock-3-1 {
+    flex-direction: column;
+  }
+
+  .detailsBlock-3-1-1 {
+    padding: 2vmax 0;
+  }
+
+  .detailsBlock-3-1-1 > button {
+    padding: 1.2vmax;
+    width: 4vmax;
+  }
+
+  .detailsBlock-3-1-1 > input {
+    padding: 1vmax;
+    width: 3vmax;
+    font: 400 1.8vmax "Roboto";
+  }
+
+  .detailsBlock-3-1 > button:last-child {
+    font: 500 1.7vmax "Roboto";
+    padding: 1.5vmax;
+    width: 20vmax;
+    margin: 3vmax 0;
+  }
+
+  .detailsBlock-3 > p {
+    padding: 2.5vmax 0;
+    text-align: center;
+    font: 400 2vmax "Roboto";
+  }
+
+  .detailsBlock-4 {
+    font: 500 2.5vmax sans-serif;
+  }
+
+  .detailsBlock-4 > p {
+    font: 300 1.8vmax sans-serif;
+  }
+
+  .submitReview {
+    font: 500 1.7vmax "Roboto";
+    padding: 1.5vmax;
+    width: 20vmax;
+    margin: 3vmax 0;
+  }
+
+  .filterBox {
+    width: 20vmax;
+    position: static;
+    margin: auto;
+  }
+
+  .category-link {
+    font: 400 1.8vmax "Roboto";
+  }
+
+  .signInSignUpContainer {
+    background-color: #ffffff;
+  }
+  .signInSignUpBox {
+    width: 100vw;
+    height: 95vh;
+  }
+  .signIn_signUp_toggle {
+    height: 5vmax;
+  }
+  .signIn_signUp_toggle > p {
+    font: 300 1.8vmax "Roboto";
+  }
+
+  .signInForm,
+  .signUpForm {
+    padding: 5vmax;
+  }
+
+  .signInForm > div > input,
+  .signUpForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .signInForm > div > svg,
+  .signUpForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  .signInForm > a {
+    font: 500 1.8vmax "Gill Sans";
+  }
+
+  #signUpImage > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #signUpImage > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+  }
+
+  .signInButton,
+  .signUpButton {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+
+  .profileContainer {
+    flex-direction: column;
+  }
+
+  .profileContainer > div:first-child > h1 {
+    font: 500 3.2vmax "Roboto";
+    transform: translateY(-2vmax);
+  }
+
+  .profileContainer > div:first-child > a {
+    font: 400 1.7vmax "Roboto";
+    padding: 1vmax;
+  }
+
+  .profileContainer > div:last-child {
+    text-align: center;
+    align-items: center;
+  }
+
+  .profileContainer > div:last-child > div > h4 {
+    font: 400 2.5vmax "Roboto";
+  }
+
+  .profileContainer > div:last-child > div > p {
+    font: 400 2vmax cursive;
+    margin: 0.5vmax 0;
+  }
+
+  .profileContainer > div:last-child > div:last-child > a {
+    font: 400 1.8vmax "Roboto";
+    padding: 1vmax;
+    margin: 2vmax 0;
+  }
+
+  .updateProfileBox {
+    width: 100vw;
+    height: 75vh;
+  }
+
+  .updateProfileHeading {
+    font-size: 2vmax;
+  }
+
+  .updateProfileForm {
+    padding: 5vmax;
+  }
+
+  .updateProfileForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .updateProfileForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  #updateProfileImage > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #updateProfileImage > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+  }
+
+  .updateProfileBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+
+  .updatePasswordBox {
+    width: 100vw;
+    height: 75vh;
+  }
+
+  .updatePasswordHeading {
+    font-size: 2vmax;
+  }
+
+  .updatePasswordForm {
+    padding: 5vmax;
+  }
+
+  .updatePasswordForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .updatePasswordForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  .updatePasswordBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+
+  .forgotPasswordBox {
+    width: 100vw;
+    height: 75vh;
+  }
+
+  .forgotPasswordForm {
+    padding: 5vmax;
+  }
+
+  .forgotPasswordHeading {
+    font-size: 2vmax;
+  }
+
+  .forgotPasswordForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .forgotPasswordForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  .forgotPasswordBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+
+  .resetPasswordBox {
+    width: 100vw;
+    height: 75vh;
+  }
+
+  .resetPasswordHeading {
+    font-size: 2vmax;
+  }
+
+  .resetPasswordForm {
+    padding: 5vmax;
+  }
+
+  .resetPasswordForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .resetPasswordForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  .resetPasswordBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+
+  .cartPage {
+    padding: 0;
+  }
+
+  .cartHeader {
+    width: 100%;
+    font: 300 1.7vmax "Roboto";
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+
+  .cartContainer {
+    width: 100%;
+    grid-template-columns: 3fr 1fr 1fr;
+  }
+
+  .cartInput {
+    height: 20vmax;
+  }
+
+  .cartInput > button {
+    padding: 1.5vmax;
+  }
+
+  .cartInput > input {
+    width: 4vmax;
+    font: 400 1.5vmax "Roboto";
+  }
+
+  .cartSubtotal {
+    padding: 1.5vmax;
+    height: 20vmax;
+    font: 300 2vmax "Roboto";
+  }
+
+  .cartGrossProfit {
+    display: grid;
+    grid-template-columns: 0fr 2fr;
+  }
+
+  .cartGrossProfitBox {
+    padding: 2vmax;
+    font: 300 2vmax "Roboto";
+  }
+
+  .checkOutBtn > button {
+    padding: 2vmax 4vmax;
+    width: 100%;
+    font: 300 2vmax "Roboto";
+  }
+
+  .cartItemCard {
+    padding: 3vmax;
+    height: 25vmax;
+  }
+  .cartItemCard > img {
+    width: 10vmax;
+  }
+
+  .cartItemCard > div {
+    margin: 1vmax 2vmax;
+  }
+
+  .cartItemCard > div > a {
+    font: 300 2vmax cursive;
+  }
+
+  .cartItemCard > div > span {
+    font: 300 1.9vmax "Roboto";
+  }
+
+  .cartItemCard > div > p {
+    font: 100 1.8vmax "Roboto";
+  }
+
+  .shippingBox {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .shippingHeading {
+    font: 400 3vmax "Roboto";
+    padding: 2vmax;
+  }
+
+  .shippingForm {
+    padding: 11vw;
+  }
+
+  .shippingForm > div > input,
+  .shippingForm > div > select {
+    padding: 3vw 9vw;
+    font: 300 2vw cursive;
+  }
+
+  .shippingForm > div > svg {
+    font-size: 4vw;
+    transform: translateX(3vw);
+  }
+
+  .shippingBtn {
+    font: 300 3vw "Roboto";
+    padding: 2vw;
+  }
+
+  .confirmOrderPage {
+    grid-template-columns: 1fr;
+    height: unset;
+  }
+
+  .confirmOrderPage > div:last-child {
+    border-left: 0;
+    border-top: 1px solid #ffffff;
+  }
+
+  .confirmshippingArea > p {
+    font: 400 4vw "Roboto";
+  }
+
+  .confirmshippingAreaBox > div {
+    display: flex;
+    margin: 3vw 0;
+  }
+
+  .confirmshippingAreaBox > div > p {
+    font: 400 2vw "Roboto";
+  }
+  .confirmshippingAreaBox > div > span {
+    font: 100 2vw "Roboto";
+  }
+
+  .confirmCartItems > p {
+    font: 400 3vw "Roboto";
+  }
+
+  .confirmCartItemsContainer {
+    max-height: 50vw;
+  }
+
+  .confirmCartItemsContainer > div {
+    font: 400 3vw "Roboto";
+    margin: 2vw 0;
+  }
+
+  .confirmCartItemsContainer > div > img {
+    width: 10vw;
+  }
+
+  .confirmCartItemsContainer > div > a {
+    margin: 0;
+    width: 30%;
+  }
+
+  .confirmCartItemsContainer > div > span {
+    font: 100 3vw "Roboto";
+  }
+
+  .orderSummary {
+    padding: 4vw;
+  }
+
+  .orderSummary > p {
+    font: 400 4vw "Roboto";
+    padding: 3vw;
+  }
+
+  .orderSummary > div > div {
+    font: 300 2vw "Roboto";
+  }
+
+  .orderSummaryTotal {
+    font: 300 3vw "Roboto";
+    padding: 5vw 0;
+  }
+
+  .orderSummary > button {
+    padding: 3vw;
+    margin: 2vw auto;
+    font: 400 3vw "Roboto";
+  }
+
+  .paymentForm {
+    width: 90%;
+  }
+
+  .paymentForm > p {
+    font: 400 4vw "Roboto";
+    padding: 2vw 0;
+    width: 60%;
+  }
+
+  .paymentForm > div {
+    margin: 7vw 0;
+  }
+
+  .paymentInput {
+    padding: 3vw 8vw;
+  }
+
+  .paymentForm > div > svg {
+    font-size: 4vw;
+  }
+
+  .paymentFormBtn {
+    font: 300 2vw "Roboto";
+    padding: 3vw;
+  }
+
+  .orderSuccess > a {
+    padding: 3vw 6vw;
+    font: 400 4vw "Roboto";
+    margin: 2vmax;
+  }
+
+  .orderSuccess > svg {
+    font-size: 20vw;
+  }
+  .orderSuccess > p {
+    margin: 2vmax;
+    font-size: 4vw;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardContainer {
+    border-left: none;
+  }
+
+  .dashboardSummary > div > p {
+    margin: 0;
+  }
+
+  .dashboardSummaryBox2 > a {
+    padding: 0.5rem;
+    margin: 1rem;
+    font: 300 0.9rem "Roboto";
+  }
+
+  .MuiDataGrid-columnHeader div {
+    font: 500 3vw "Roboto" !important;
+  }
+
+  .productListTable div {
+    font: 300 2vw "Roboto";
+  }
+  .createProductForm {
+    padding: 5vmax;
+  }
+
+  .createProductForm > div > input,
+  .createProductForm > div > select,
+  .createProductForm > div > textarea {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .createProductForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  #createProductFormFile > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #createProductFormFile > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+  }
+
+  #createProductBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+
+  .productReviewsContainer {
+    border-left: none;
+    border-top: 1px solid #ffffff;
+  }
+  .productReviewsForm > div > input {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .productReviewsForm > div > svg {
+    font-size: 2.8vmax;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .myOrdersPage {
+    padding: 0;
+    height: 93vh;
+  }
+
+  #myOrdersHeading {
+    font: 400 2.2vmax "Roboto";
+    padding: 4vw;
+  }
+
+  .myOrdersTable div {
+    font: 300 4vw "Roboto";
+  }
+
+  .MuiDataGrid-columnHeader {
+    padding: 20px !important;
+  }
+
+  .MuiDataGrid-columnHeader div {
+    font: 500 5vw "Roboto" !important;
+  }
+
+  .orderDetailsContainer > p {
+    font: 400 6vw "Roboto";
+  }
+
+  .orderDetailsContainerBox > div {
+    margin: 6vw 0;
+  }
+
+  .orderDetailsContainerBox > div > p {
+    font: 400 4vw "Roboto";
+  }
+  .orderDetailsContainerBox > div > span {
+    font: 100 4vw "Roboto";
+  }
+
+  .orderDetailsCartItems > p {
+    font: 400 6vw "Roboto";
+  }
+
+  .orderDetailsCartItemsContainer > div {
+    font: 400 4vw "Roboto";
+    margin: 4vw 0;
+  }
+
+  .orderDetailsCartItemsContainer > div > img {
+    width: 10vw;
+  }
+
+  .orderDetailsCartItemsContainer > div > a {
+    margin: 2vw;
+    width: 30%;
+  }
+
+  .orderDetailsCartItemsContainer > div > span {
+    font: 100 4vw "Roboto";
+  }
+
+  .reviewCard > p {
+    font: 600 3vh "Roboto";
+  }
+
+  .reviewCardComment {
+    font: 300 5vw cursive;
+  }
+
+  .productListTable div {
+    font: 300 4vw "Roboto";
+  }
+
+  .updateOrderForm {
+    padding: 5vmax;
+  }
+
+  .updateOrderForm > div > select {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .updateOrderForm > div > svg {
+    font-size: 2.8vmax;
+  }
+  .aboutSectionContainer > div {
+    display: block;
+  }
+
+  .aboutSectionContainer > h1 {
+    font: 400 5vmax "Roboto";
+    margin: 3vmax;
+  }
+
+  .aboutSectionContainer > div > div > p {
+    font: 100 2vmax "Roboto";
+  }
+
+  .aboutSectionContainer > div > div > span {
+    font: 100 1.4vmax "Roboto";
+    width: 70%;
+  }
+
+  .aboutSectionContainer2 {
+    border-left: none;
+  }
+
+  .aboutSectionContainer2 > h2 {
+    font: 100 3vmax "Roboto";
+    margin: 2vmax;
+  }
+
+  .aboutSectionContainer2 > a > svg {
+    font-size: 6vmax;
+    margin: 1vmax;
+  }
+}
