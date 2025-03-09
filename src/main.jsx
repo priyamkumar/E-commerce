@@ -34,6 +34,8 @@ import ProductReviews from "./Components/ProductReviews.jsx";
 import About from "./Components/About.jsx";
 import Contact from "./Components/Contact.jsx";
 
+export const server = "https://e-commerce-backend-production-4354.up.railway.app"
+
 const router = createBrowserRouter([
   {
     path: "/",

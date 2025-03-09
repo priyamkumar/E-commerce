@@ -17,6 +17,7 @@ import {
 } from "@stripe/react-stripe-js";
 import { createOrder, clearErrors } from "../actions/orderAction";
 import toast from "react-hot-toast";
+import { server } from "../main.jsx";
 
 export default function Payment() {
   const dispatch = useDispatch();
@@ -54,7 +55,7 @@ export default function Payment() {
         },
       };
       const { data } = await axios.post(
-        "/api/v1/payment/process",
+        `${server}/api/v1/payment/process`,
         paymentData,
         config
       );
