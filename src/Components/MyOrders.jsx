@@ -4,14 +4,13 @@ import MetaData from "./MetaData";
 import Loader from "./Loader";
 import { Typography } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { useAlert } from "react-alert";
 import { clearErrors, myOrders } from "../actions/orderAction";
 import { Link } from "react-router-dom";
 import LaunchIcon from '@mui/icons-material/Launch';
+import toast from "react-hot-toast";
 
 export default function MyOrders() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const { loading, error, orders } = useSelector((state) => state.myOrders);
   const { user } = useSelector((state) => state.user);
 
@@ -73,11 +72,11 @@ export default function MyOrders() {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
     dispatch(myOrders());
-  }, [dispatch, alert, error]);
+  }, [dispatch, toast, error]);
 
   return (
     <>

@@ -6,13 +6,12 @@ import LockIcon from "@mui/icons-material/Lock";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import { useSelector, useDispatch } from "react-redux";
 import { updatePassword, clearErrors } from "../actions/userAction";
-import { useAlert } from "react-alert";
 import MetaData from "./MetaData";
 import { UPDATE_PASSWORD_RESET } from "../constants/userConstants";
+import toast from "react-hot-toast";
 
 export default function UpdatePassword() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const navigateTo = useNavigate();
   const { error, isUpdated, loading } = useSelector((state) => state.profile);
 
@@ -31,12 +30,12 @@ export default function UpdatePassword() {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (isUpdated) {
-      alert.success("Password Updated Successfully");
+      toast.success("Password Updated Successfully");
 
       navigateTo("/account");
 
@@ -44,7 +43,7 @@ export default function UpdatePassword() {
         type: UPDATE_PASSWORD_RESET,
       });
     }
-  }, [dispatch, error, alert, navigateTo, isUpdated]);
+  }, [dispatch, error, toast, navigateTo, isUpdated]);
 
   return loading ? (
     <Loader />

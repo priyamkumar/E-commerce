@@ -3,17 +3,17 @@ import ProductCard from "./ProductCard";
 import { clearErrors, getProduct } from "../actions/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "./Loader";
-import { useAlert } from "react-alert";
+import toast from "react-hot-toast";
+
 
 export default function FeaturedProducts() {
-  const alert = useAlert();
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.products);
 
   useEffect(() => {
     if (error) {
       dispatch(clearErrors());
-      alert.error(error);
+      toast.error(error);
     }
     dispatch(getProduct());
   }, [dispatch, error]);

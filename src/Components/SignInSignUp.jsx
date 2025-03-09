@@ -6,7 +6,7 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import Person2Icon from "@mui/icons-material/Person2";
 import { useSelector, useDispatch } from "react-redux";
 import { login, register, clearErrors } from "../actions/userAction";
-import { useAlert } from "react-alert";
+import toast from "react-hot-toast";
 
 export default function SignInSignUp() {
   const [signInEmail, setSignInEmail] = useState("");
@@ -30,7 +30,6 @@ export default function SignInSignUp() {
   const { error, loading, isAuthenticated } = useSelector(
     (state) => state.user
   );
-  const alert = useAlert();
   const navigateTo = useNavigate();
   const location = useLocation();
 
@@ -65,12 +64,12 @@ export default function SignInSignUp() {
   useEffect(() => {
     if (error) {
       dispatch(clearErrors());
-      alert.error(error);
+      toast.error(error);
     }
     if (isAuthenticated) {
       navigateTo(redirect);
     }
-  }, [dispatch, error, alert, isAuthenticated, navigateTo]);
+  }, [dispatch, error, toast, isAuthenticated, navigateTo]);
 
   const switchTabs = (e, tab) => {
     if (tab === "signIn") {
@@ -90,7 +89,7 @@ export default function SignInSignUp() {
   const signInSubmit = (e) => {
     e.preventDefault();
     dispatch(login(signInEmail, signInPassword));
-    alert.success("Signed in successfully.");
+    toast.success("Signed in successfully.");
   };
 
   const signUpSubmit = (e) => {

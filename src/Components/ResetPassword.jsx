@@ -5,12 +5,11 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import LockIcon from "@mui/icons-material/Lock";
 import { useSelector, useDispatch } from "react-redux";
 import { resetPassword, clearErrors } from "../actions/userAction";
-import { useAlert } from "react-alert";
 import MetaData from "./MetaData";
+import toast from "react-hot-toast";
 
 export default function ResetPassword() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const navigateTo = useNavigate();
   const params = useParams();
   const { error, success, loading } = useSelector(
@@ -30,15 +29,15 @@ export default function ResetPassword() {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (success) {
-      alert.success("Password Updated Successfully");
+      toast.success("Password Updated Successfully");
       navigateTo("/signin");
     }
-  }, [dispatch, error, alert, navigateTo, success]);
+  }, [dispatch, error, toast, navigateTo, success]);
 
   return loading ? (
     <Loader />

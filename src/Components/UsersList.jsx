@@ -7,15 +7,13 @@ import { Button } from "@mui/material";
 import MetaData from "./MetaData";
 import { allUsers, clearErrors, deleteUser } from "../actions/userAction";
 import { DELETE_USER_RESET } from "../constants/userConstants";
-import { useAlert } from "react-alert";
 import Sidebar from "./Sidebar";
 import { useDispatch, useSelector } from "react-redux";
+import toast from "react-hot-toast";
 
 export default function UsersList() {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
-
-  const alert = useAlert();
 
   const { error, users } = useSelector((state) => state.allUsers);
 
@@ -31,23 +29,23 @@ export default function UsersList() {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (deleteError) {
-      alert.error(deleteError);
+      toast.error(deleteError);
       dispatch(clearErrors());
     }
 
     if (isDeleted) {
-      alert.success(message);
+      toast.success(message);
       navigateTo("/admin/users");
       dispatch({ type: DELETE_USER_RESET });
     }
 
     dispatch(allUsers());
-  }, [dispatch, alert, error, deleteError, navigateTo, isDeleted, message]);
+  }, [dispatch, toast, error, deleteError, navigateTo, isDeleted, message]);
 
   const columns = [
     { field: "id", headerName: "User ID", minWidth: 180, flex: 0.8 },

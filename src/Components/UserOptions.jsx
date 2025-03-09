@@ -7,14 +7,13 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useNavigate } from "react-router-dom";
-import { useAlert } from "react-alert";
 import { logout } from "../actions/userAction";
 import Backdrop from "@mui/material/Backdrop";
+import toast from "react-hot-toast";
 
 export default function UserOptions({ user }) {
   const [open, setOpen] = useState(false);
   const navigateTo = useNavigate();
-  const alert = useAlert();
   const dispatch = useDispatch();
   const { cartItems } = useSelector((state) => state.cart);
 
@@ -32,7 +31,7 @@ export default function UserOptions({ user }) {
 
   function logoutUser() {
     dispatch(logout());
-    alert.success("Signed out successfully.");
+    toast.success("Signed out successfully.");
     navigateTo(`/#home`);
   }
 

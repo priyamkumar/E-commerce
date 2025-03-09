@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { useAlert } from "react-alert";
 import MetaData from "./MetaData";
 import { Typography } from "@mui/material";
 import Loader from "./Loader";
 import { clearErrors, getOrderDetails } from "../actions/orderAction";
+import toast from "react-hot-toast";
 
 export default function OrderDetails() {
-  const alert = useAlert();
   const dispatch = useDispatch();
   const params = useParams();
   const { id } = params;
@@ -16,11 +15,11 @@ export default function OrderDetails() {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
     dispatch(getOrderDetails(id));
-  }, [dispatch, alert, error, id]);
+  }, [dispatch, toast, error, id]);
 
   return loading ? (
     <Loader />

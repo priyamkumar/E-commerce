@@ -8,6 +8,7 @@ import store from "./store";
 import { loadUser } from "./actions/userAction";
 import { useSelector } from "react-redux";
 import UserOptions from "./Components/UserOptions";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -19,7 +20,6 @@ function App() {
       },
     });
     store.dispatch(loadUser());
-
   }, []);
 
   return (
@@ -28,6 +28,7 @@ function App() {
       {isAuthenticated && <UserOptions user={user} />}
       <Outlet />
       <Footer />
+      <Toaster />
     </>
   );
 }

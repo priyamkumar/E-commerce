@@ -5,13 +5,12 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import Person2Icon from "@mui/icons-material/Person2";
 import { useSelector, useDispatch } from "react-redux";
 import { updateProfile, clearErrors, loadUser } from "../actions/userAction";
-import { useAlert } from "react-alert";
 import MetaData from "./MetaData";
 import { UPDATE_PROFILE_RESET } from "../constants/userConstants";
+import toast from "react-hot-toast";
 
 export default function UpdateProfile() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const navigateTo = useNavigate();
   const { user } = useSelector((state) => state.user);
   const { error, isUpdated, loading } = useSelector((state) => state.profile);
@@ -50,12 +49,12 @@ export default function UpdateProfile() {
       setAvatarPreview(user.avatar.url);
     }
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (isUpdated) {
-      alert.success("Profile Updated Successfully");
+      toast.success("Profile Updated Successfully");
       dispatch(loadUser());
 
       navigateTo("/account");
@@ -64,7 +63,7 @@ export default function UpdateProfile() {
         type: UPDATE_PROFILE_RESET,
       });
     }
-  }, [dispatch, error, alert, navigateTo, user, isUpdated]);
+  }, [dispatch, error, toast, navigateTo, user, isUpdated]);
 
   return loading ? (
     <Loader />

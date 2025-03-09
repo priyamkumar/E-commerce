@@ -9,12 +9,11 @@ import Sidebar from "./Sidebar";
 import { clearErrors, newProduct } from "../actions/productAction";
 import { NEW_PRODUCT_RESET } from "../constants/productConstants";
 import { Button } from "@mui/material";
-import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function NewProduct() {
     const dispatch = useDispatch();
-    const alert = useAlert();
     const navigateTo = useNavigate();
     const [name, setName] = useState("");
     const [price, setPrice] = useState(0);
@@ -38,16 +37,16 @@ export default function NewProduct() {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (success) {
-      alert.success("Product Created Successfully");
+      toast.success("Product Created Successfully");
       navigateTo("/admin/dashboard");
       dispatch({ type: NEW_PRODUCT_RESET });
     }
-  }, [dispatch, alert, error, navigateTo, success]);
+  }, [dispatch, toast, error, navigateTo, success]);
 
 
   const newProductSubmitHandler = (e) => {

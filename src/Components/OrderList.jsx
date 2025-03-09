@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { useAlert } from "react-alert";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Sidebar from "./Sidebar";
@@ -10,10 +9,10 @@ import { allOrders, clearErrors, deleteOrder } from "../actions/orderAction";
 import { DELETE_ORDER_RESET } from "../constants/orderConstants";
 import { Button } from "@mui/material";
 import MetaData from "./MetaData";
+import toast from "react-hot-toast";
 
 export default function OrderList() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const navigateTo = useNavigate();
   const { error, orders } = useSelector((state) => state.allOrders);
   const { error: deleteError, isDeleted } = useSelector((state) => state.order);
@@ -24,23 +23,23 @@ export default function OrderList() {
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (deleteError) {
-      alert.error(deleteError);
+      toast.error(deleteError);
       dispatch(clearErrors());
     }
 
     if (isDeleted) {
-      alert.success("Order Deleted Successfully");
+      toast.success("Order Deleted Successfully");
       navigateTo("/admin/orders");
       dispatch({ type: DELETE_ORDER_RESET });
     }
 
     dispatch(allOrders());
-  }, [dispatch, alert, error, deleteError, navigateTo, isDeleted]);
+  }, [dispatch, toast, error, deleteError, navigateTo, isDeleted]);
 
   const columns = [
     { field: "id", headerName: "Order ID", minWidth: 300, flex: 1 },

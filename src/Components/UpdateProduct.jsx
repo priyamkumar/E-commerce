@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useAlert } from "react-alert";
 import MetaData from "./MetaData";
 import Sidebar from "./Sidebar";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
@@ -16,10 +15,10 @@ import {
   updateProduct,
 } from "../actions/productAction";
 import { useNavigate, useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function UpdateProduct() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const params = useParams();
   const navigateTo = useNavigate();
 
@@ -63,23 +62,23 @@ export default function UpdateProduct() {
       setOldImages(product.images);
     }
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
 
     if (updateError) {
-      alert.error(updateError);
+      toast.error(updateError);
       dispatch(clearErrors());
     }
 
     if (isUpdated) {
-      alert.success("Product Updated Successfully");
+      toast.success("Product Updated Successfully");
       navigateTo("/admin/products");
       dispatch({ type: UPDATE_PRODUCT_RESET });
     }
   }, [
     dispatch,
-    alert,
+    toast,
     error,
     navigateTo,
     isUpdated,

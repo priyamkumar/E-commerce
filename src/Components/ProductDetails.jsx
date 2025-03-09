@@ -10,7 +10,6 @@ import { useParams } from "react-router-dom";
 import MetaData from "./MetaData";
 import ReviewCard from "./ReviewCard";
 import Loader from "./Loader";
-import { useAlert } from "react-alert";
 import { addItemsToCart } from "../actions/cartAction";
 import {
   Dialog,
@@ -21,6 +20,7 @@ import {
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
 import { NEW_REVIEW_RESET } from "../constants/productConstants";
+import toast from "react-hot-toast";
 
 export default function ProductDetails() {
   const [quantity, setQuantity] = useState(1);
@@ -29,7 +29,6 @@ export default function ProductDetails() {
   const [comment, setComment] = useState("");
   const params = useParams();
   const dispatch = useDispatch();
-  const alert = useAlert();
   const { loading, product, error } = useSelector(
     (state) => state.productDetails
   );
@@ -54,7 +53,7 @@ export default function ProductDetails() {
 
   function addToCartHandler() {
     dispatch(addItemsToCart(params.id, quantity));
-    alert.success("Item added to cart.");
+    toast.success("Item added to cart.");
   }
 
   const submitReviewToggle = () => {
@@ -73,18 +72,18 @@ export default function ProductDetails() {
   useEffect(() => {
     if (error) {
       dispatch(clearErrors());
-      alert.error(error);
+      toast.error(error);
     }
     if (reviewError) {
       dispatch(clearErrors());
-      alert.error(reviewError);
+      toast.error(reviewError);
     }
     if (success) {
-      alert.success("Review submitted successfully.");
+      toast.success("Review submitted successfully.");
       dispatch({ type: NEW_REVIEW_RESET });
     }
     dispatch(getProductDetails(params.id));
-  }, [dispatch, params.id, reviewError, success]);
+  }, [dispatch, params.id, reviewError, success, toast]);
 
   return loading ? (
     <Loader />

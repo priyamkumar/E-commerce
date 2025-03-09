@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
-import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
 import MetaData from "./MetaData";
 import Sidebar from "./Sidebar";
@@ -11,10 +10,10 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PersonIcon from "@mui/icons-material/Person";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import { useNavigate, useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function UpdateUser() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const params = useParams();
   const navigateTo = useNavigate();
 
@@ -39,24 +38,24 @@ export default function UpdateUser() {
       setRole(user.role);
     }
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
       navigateTo("/admin/users");
     }
 
     if (updateError) {
-      alert.error(updateError);
+      toast.error(updateError);
       dispatch(clearErrors());
     }
 
     if (isUpdated) {
-      alert.success("User Updated Successfully");
+      toast.success("User Updated Successfully");
       navigateTo("/admin/users");
       dispatch({ type: UPDATE_USER_RESET });
     }
   }, [
     dispatch,
-    alert,
+    toast,
     error,
     navigateTo,
     isUpdated,

@@ -7,8 +7,8 @@ import { useParams } from "react-router-dom";
 import Pagination from "@mui/material/Pagination";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
-import { useAlert } from "react-alert";
 import MetaData from "./MetaData";
+import toast from "react-hot-toast";
 
 const categories = [
   "Clothing",
@@ -30,7 +30,6 @@ export default function Products() {
     useSelector((state) => state.products);
 
   const { keyword } = params;
-  const alert = useAlert();
 
   const handleChange = (event, value) => {
     setPage(value);
@@ -43,10 +42,10 @@ export default function Products() {
   useEffect(() => {
     if (error) {
       dispatch(clearErrors());
-      alert.error(error);
+      toast.error(error);
     }
     dispatch(getProduct(keyword, page, price, category, ratings));
-  }, [dispatch, keyword, page, price, category, ratings, alert, error]);
+  }, [dispatch, keyword, page, price, category, ratings, toast, error]);
 
   return loading ? (
     <Loader />

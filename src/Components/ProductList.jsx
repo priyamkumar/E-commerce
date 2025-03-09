@@ -7,17 +7,16 @@ import {
   getAdminProduct,
 } from "../actions/productAction";
 import { Link, useNavigate } from "react-router-dom";
-import { useAlert } from "react-alert";
 import EditIcon from "@mui/icons-material/Edit";
 import MetaData from "./MetaData";
 import Sidebar from "./Sidebar";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Button } from "@mui/material";
 import { DELETE_PRODUCT_RESET } from "../constants/productConstants";
+import toast from "react-hot-toast";
 
 export default function ProductList() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const { error, products } = useSelector((state) => state.products);
   const { error: deleteError, isDeleted } = useSelector(
     (state) => state.product
@@ -90,19 +89,19 @@ export default function ProductList() {
   useEffect(() => {
     if (error) {
       dispatch(clearErrors());
-      alert.error(error);
+      toast.error(error);
     }
     if (deleteError) {
       dispatch(clearErrors());
-      alert.error(deleteError);
+      toast.error(deleteError);
     }
     if (isDeleted) {
-      alert.success("Product delete successfully.");
+      toast.success("Product delete successfully.");
       navigateTo("/admin/dashboard");
       dispatch({ type: DELETE_PRODUCT_RESET });
     }
     dispatch(getAdminProduct());
-  }, [dispatch, alert, error, deleteError, navigateTo, isDeleted]);
+  }, [dispatch, toast, error, deleteError, navigateTo, isDeleted]);
 
   return (
     <>

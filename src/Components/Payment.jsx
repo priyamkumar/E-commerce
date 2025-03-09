@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import MetaData from "./MetaData";
 import CheckoutSteps from "./CheckoutSteps";
@@ -17,10 +16,10 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 import { createOrder, clearErrors } from "../actions/orderAction";
+import toast from "react-hot-toast";
 
 export default function Payment() {
   const dispatch = useDispatch();
-  const alert = useAlert();
   const stripe = useStripe();
   const elements = useElements();
   const payBtn = useRef(null);
@@ -81,7 +80,7 @@ export default function Payment() {
       });
       if (result.error) {
         payBtn.current.disabled = false;
-        alert.error(result.error.message);
+        toast.error(result.error.message);
       } else {
         if (result.paymentIntent.status === "succeeded") {
           order.paymentInfo = {
@@ -91,12 +90,12 @@ export default function Payment() {
           dispatch(createOrder(order));
           navigateTo("/success");
         } else {
-          alert.error("There's some issue while processing payment! ");
+          toast.error("There's some issue while processing payment! ");
         }
       }
     } catch (error) {
       payBtn.current.disabled = true;
-      alert.error(error.response.data.message);
+      toast.error(error.response.data.message);
     }
   }
 
@@ -116,10 +115,10 @@ export default function Payment() {
 
   useEffect(() => {
     if(error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
-  }, [dispatch, error, alert])
+  }, [dispatch, error, toast])
 
   return (
     <>

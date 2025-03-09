@@ -10,9 +10,9 @@ import {
 } from "../actions/orderAction";
 import Loader from "./Loader";
 import { UPDATE_ORDER_RESET } from "../constants/orderConstants";
-import { useAlert } from "react-alert";
 import { useDispatch, useSelector } from "react-redux";
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import toast from "react-hot-toast";
 
 export default function ProcessOrder() {
   const { order, error, loading } = useSelector((state) => state.orderDetails);
@@ -28,27 +28,26 @@ export default function ProcessOrder() {
   };
 
   const dispatch = useDispatch();
-  const alert = useAlert();
 
   const [status, setStatus] = useState("");
   const params = useParams();
 
   useEffect(() => {
     if (error) {
-      alert.error(error);
+      toast.error(error);
       dispatch(clearErrors());
     }
     if (updateError) {
-      alert.error(updateError);
+      toast.error(updateError);
       dispatch(clearErrors());
     }
     if (isUpdated) {
-      alert.success("Order Updated Successfully");
+      toast.success("Order Updated Successfully");
       dispatch({ type: UPDATE_ORDER_RESET });
     }
 
     dispatch(getOrderDetails(params.id));
-  }, [dispatch, alert, error, params.id, isUpdated, updateError]);
+  }, [dispatch, toast, error, params.id, isUpdated, updateError]);
 
   return (
     <>
