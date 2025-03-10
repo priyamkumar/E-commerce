@@ -53,6 +53,7 @@ export default function Payment() {
         headers: {
           "Content-Type": "application/json",
         },
+        withCredentials: true,
       };
       const { data } = await axios.post(
         `${server}/api/v1/payment/process`,

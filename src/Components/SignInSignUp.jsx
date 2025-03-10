@@ -89,7 +89,6 @@ export default function SignInSignUp() {
   const signInSubmit = (e) => {
     e.preventDefault();
     dispatch(login(signInEmail, signInPassword));
-    toast.success("Signed in successfully.");
   };
 
   const signUpSubmit = (e) => {

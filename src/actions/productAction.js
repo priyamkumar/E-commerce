@@ -57,7 +57,9 @@ export const getAdminProduct = () => async (dispatch) => {
   let link = `${server}/api/v1/product/admin/products`;
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
-    const { data } = await axios.get(link);
+    const { data } = await axios.get(link, {
+      withCredentials: true,
+    });
     dispatch({
       type: ADMIN_PRODUCT_SUCCESS,
       payload: data,
@@ -93,6 +95,7 @@ export const newReview = (reviewData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
     const { data } = await axios.put(
       `${server}/api/v1/product/review`,
@@ -118,6 +121,7 @@ export const newProduct = (productData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
     const { data } = await axios.post(
       `${server}/api/v1/product/admin/create`,
@@ -139,7 +143,12 @@ export const newProduct = (productData) => async (dispatch) => {
 export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
-    const { data } = await axios.delete(`${server}/api/v1/product/admin/${id}`);
+    const { data } = await axios.delete(
+      `${server}/api/v1/product/admin/${id}`,
+      {
+        withCredentials: true,
+      }
+    );
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
       payload: data.success,
@@ -159,6 +168,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
     const { data } = await axios.put(
       `${server}/api/v1/product/admin/${id}`,
@@ -180,7 +190,12 @@ export const updateProduct = (id, productData) => async (dispatch) => {
 export const allReviews = (id) => async (dispatch) => {
   try {
     dispatch({ type: ALL_REVIEW_REQUEST });
-    const { data } = await axios.get(`${server}/api/v1/product/reviews?id=${id}`);
+    const { data } = await axios.get(
+      `${server}/api/v1/product/reviews?id=${id}`,
+      {
+        withCredentials: true,
+      }
+    );
     dispatch({
       type: ALL_REVIEW_SUCCESS,
       payload: data.reviews,
@@ -196,7 +211,12 @@ export const allReviews = (id) => async (dispatch) => {
 export const deleteReview = (reviewId, productId) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_REVIEW_REQUEST });
-    const { data } = await axios.delete(`${server}/api/v1/product/reviews?id=${reviewId}&productId=${productId}`);
+    const { data } = await axios.delete(
+      `${server}/api/v1/product/reviews?id=${reviewId}&productId=${productId}`,
+      {
+        withCredentials: true,
+      }
+    );
     dispatch({
       type: DELETE_REVIEW_SUCCESS,
       payload: data.success,

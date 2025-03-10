@@ -7,11 +7,12 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "bootstrap/dist/css/bootstrap.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   const navigateTo = useNavigate();
   const [keyword, setKeyword] = useState("");
-
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   const handleKeyword = (e) => {
     setKeyword(e.target.value);
   };
@@ -36,9 +37,15 @@ export default function Header() {
               <Nav.Link as={Link} to="/#home">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/signin">
-                Sign In
-              </Nav.Link>
+              {isAuthenticated ? (
+                <Nav.Link as={Link} to="/account">
+                  Account
+                </Nav.Link>
+              ) : (
+                <Nav.Link as={Link} to="/signin">
+                  Sign In
+                </Nav.Link>
+              )}
               <Nav.Link as={Link} to="/products">
                 Products
               </Nav.Link>

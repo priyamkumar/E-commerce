@@ -31,6 +31,7 @@ export const createOrder = (order) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
     const { data } = await axios.post(`${server}/api/v1/orders/new`, order, config);
     dispatch({
@@ -47,7 +48,9 @@ export const myOrders = () => async (dispatch) => {
     dispatch({
       type: MY_ORDERS_REQUEST,
     });
-    const { data } = await axios.get(`${server}/api/v1/orders/myOrders`);
+    const { data } = await axios.get(`${server}/api/v1/orders/myOrders`, {
+      withCredentials: true,
+    });
     dispatch({
       type: MY_ORDERS_SUCCESS,
       payload: data.orders,
@@ -62,7 +65,9 @@ export const getOrderDetails = (id) => async (dispatch) => {
     dispatch({
       type: ORDER_DETAILS_REQUEST,
     });
-    const { data } = await axios.get(`${server}/api/v1/orders/details/${id}`);
+    const { data } = await axios.get(`${server}/api/v1/orders/details/${id}`, {
+      withCredentials: true,
+    });
     dispatch({
       type: ORDER_DETAILS_SUCCESS,
       payload: data.order,
@@ -86,7 +91,9 @@ export const allOrders = () => async (dispatch) => {
     dispatch({
       type: ALL_ORDERS_REQUEST,
     });
-    const { data } = await axios.get(`${server}/api/v1/orders/allOrders`);
+    const { data } = await axios.get(`${server}/api/v1/orders/allOrders`, {
+      withCredentials: true,
+    });
     dispatch({
       type: ALL_ORDERS_SUCCESS,
       payload: data.orders,
@@ -105,6 +112,7 @@ export const updateOrder = (id, order) => async (dispatch) => {
       headers: {
         "Content-Type": "application/json",
       },
+      withCredentials: true,
     };
     const { data } = await axios.put(
       `${server}/api/v1/orders/order/${id}`,
@@ -125,7 +133,9 @@ export const deleteOrder = (id, order) => async (dispatch) => {
     dispatch({
       type: DELETE_ORDER_REQUEST,
     });
-    const { data } = await axios.delete(`${server}/api/v1/orders/order/${id}`);
+    const { data } = await axios.delete(`${server}/api/v1/orders/order/${id}`, {
+      withCredentials: true,
+    });
     dispatch({
       type: DELETE_ORDER_SUCCESS,
       payload: data.success,
