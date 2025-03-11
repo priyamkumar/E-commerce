@@ -32,13 +32,8 @@ export default function SignInSignUp() {
   );
   const navigateTo = useNavigate();
   const location = useLocation();
-  console.log("URL search:", window.location.search);
-console.log("Full URL:", window.location.href);
 
-// Then try this modified approach
-const params = new URLSearchParams(window.location.search);
-const redirect = params.has('redirect') ? params.get('redirect') : "/account";
-console.log("Redirect value:", redirect);
+  const redirect = location.search ? location.search.split("=")[1] : "/account";
 
   const getDefaultBase64 = async (defaultImage) => {
     try {
@@ -72,7 +67,7 @@ console.log("Redirect value:", redirect);
       toast.error(error);
     }
     if (isAuthenticated) {
-      navigateTo(redirect);
+      navigateTo(redirect, { replace: true });
     }
   }, [dispatch, error, toast, isAuthenticated, navigateTo]);
 
