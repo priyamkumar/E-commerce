@@ -11,7 +11,10 @@ export default function PaymentWrapper() {
 
   async function getStripeApiKey() {
     try {
-      const { data } = await axios.get(`${server}/api/v1/payment/stripeapikey`);
+      const { data } = await axios.get(
+        `${server}/api/v1/payment/stripeapikey`,
+        { withCredentials: true }
+      );
       setStripeApiKey(data.stripeApiKey);
     } catch (error) {
       console.error("Failed to fetch Stripe API key:", error);
@@ -27,6 +30,6 @@ export default function PaymentWrapper() {
       <Payment />
     </Elements>
   ) : (
-    <Loader/>
+    <Loader />
   );
 }
