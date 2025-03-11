@@ -32,9 +32,14 @@ export default function SignInSignUp() {
   );
   const navigateTo = useNavigate();
   const location = useLocation();
-  
-  const urlParams = new URLSearchParams(location.search);
-  const redirect = urlParams.get('redirect') || '/account';
+  console.log("URL search:", window.location.search);
+console.log("Full URL:", window.location.href);
+
+// Then try this modified approach
+const params = new URLSearchParams(window.location.search);
+const redirect = params.has('redirect') ? params.get('redirect') : "/account";
+console.log("Redirect value:", redirect);
+
   const getDefaultBase64 = async (defaultImage) => {
     try {
       const response = await fetch(defaultImage);
