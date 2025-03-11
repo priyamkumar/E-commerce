@@ -33,8 +33,9 @@ export default function SignInSignUp() {
   const navigateTo = useNavigate();
   const location = useLocation();
 
-  const redirect = location.search ? location.search.split("=")[1] : "/account";
-
+  const url = new URL(window.location.href);
+  const redirect = url.searchParams.get("redirect") || "/account";
+  const absoluteRedirect = redirect.startsWith("/") ? redirect : `/${redirect}`;
   const getDefaultBase64 = async (defaultImage) => {
     try {
       const response = await fetch(defaultImage);
@@ -67,7 +68,7 @@ export default function SignInSignUp() {
       toast.error(error);
     }
     if (isAuthenticated) {
-      navigateTo(redirect, { replace: true });
+      navigateTo(absoluteRedirect, { replace: true });
     }
   }, [dispatch, error, toast, isAuthenticated, navigateTo]);
 
