@@ -32,7 +32,7 @@ export default function SignInSignUp() {
   );
   const navigateTo = useNavigate();
   const location = useLocation();
-
+console.log(location);
   const redirect = location.search ? location.search.split("=")[1] : "/account";
 
   const getDefaultBase64 = async (defaultImage) => {
